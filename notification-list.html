@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="./assets/icons/hr-logo.svg" alt="logo" class="user-avatar">
+                <h2>HRHR</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#"><img class="icon" src="./assets/icons/dashboard.svg" alt="dashboard" /></i> Dashboard</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/calendar.svg" alt="calender" /></i> Calendar</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/employee.svg" alt="recruitment" /> Recruitment <span
+                            class="notification">10</span></a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/employees.svg" alt="employees" /> Employees</a></li>
+                <li><a href="#" class="active"><img class="icon" src="./assets/icons/clock.svg" alt="clock" /> Leave</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/data.svg" alt="organisation" /> Organisation</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/billing-icon.svg" alt="billing" /> Billings</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/message-question.svg" alt="engagement" /> Engagement</a>
+                </li>
+                <li><a href="#"><img class="icon" src="./assets/icons/monitor.svg" alt="development" /> Development</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/medal-star.svg" alt="Performance" /> Performance</a></li>
+                <li><a href="#"><img class="icon" src="./assets/icons/chart.svg" alt="reports" /> Reports</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="menumiz-logo"><img src="./assets/icons/union.svg" alt="menumiz-hrr" /><span
+                        style="margin-left:10px;">Menumiz HR</span></div>
+                <div class="display-flex">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Enter any keyword...">
+                    </div>
+                    <div class="user-info">
+                        <i class="fas fa-bell notification-icon"></i>
+                        <img src="./assets/icons/avatar.svg" alt="User Avatar" class="user-avatar">
+                    </div>
+                </div>
+            </header>
+ <!-- Notification Overlay -->
+ <div class="notification-overlay" id="notificationOverlay">
+    <div class="overlay-header">
+        <h3>Notifications</h3>
+        <span style="font-size: 14px; color:#898989">Mark all as read</span>
+        <!-- <button class="close-btn" id="closeBtn">&times;</button> -->
+    </div>
+    <ul class="notification-list">
+        <li class="notification-item">
+            <div class="notification-content">
+                <img src="./assets//icons/avatar.svg"/>
+                <div class="message-content">
+                <div class="sender-msg"> <strong>Mark Jacobs </strong> has applied for leave and is currently awaiting approval.</div>
+                <div class="time-span">Today at 09:42 AM </div>
+            </div>
+            </div>
+        </li>
+        <li class="notification-item">
+            <div class="notification-content">
+                <img src="./assets//icons/avatar.svg"/>
+                <div class="message-content">
+                <div class="sender-msg"> <strong>Mark Jacobs </strong> has applied for leave and is currently awaiting approval.</div>
+                <div class="time-span">Today at 09:42 AM </div>
+            </div>
+            </div>
+        </li>
+        <li class="notification-item">
+            <div class="notification-content">
+                <img src="./assets//icons/avatar.svg"/>
+                <div class="message-content">
+                <div class="sender-msg"> <strong>Mark Jacobs </strong> has applied for leave and is currently awaiting approval.</div>
+                <div class="time-span">Today at 09:42 AM </div>
+            </div>
+            </div>
+        </li>
+    </ul>
+</div>
+            <div class="dashboard-header">
+                <div class="tabs">
+                    <a href="#" class="active">Leave Management</a>
+                    <a href="#">Leave Requests</a>
+                    <a href="#">Leave Types</a>
+                    <a href="#">Leave Calendar</a>
+                    <a href="#">Leave Report</a>
+                    <a href="#">Leave Approver</a>
+                </div>
+
+
+            </div>
+
+
+            <div class="leave-requests">
+                <div class="top-inner-wrap">
+                    <h2 class="leave-requests-heading">Leave Requests</h2>
+                    <div class="view-options">
+                        <button class="list-view active">List View</button>
+                        <button class="month-view">Month View</button>
+                    </div>
+                </div>
+                <div class="filters">
+                    <div class="tabs">
+                        <button class="tab-btn active">All</button>
+                        <button class="tab-btn">Approved</button>
+                        <button class="tab-btn">Rejected</button>
+                    </div>
+                    <div class="month-select">
+                        <button class="arrow left"> <i class="fas fa-caret-left"></i></button>
+                        <span class="month">March</span><span class="year"> 2023</span>
+                        
+                        <button class="calendar-icon">
+                            <img src="./assets/icons/Date_range_fill.svg" alt="Calenar">
+                        </button>
+                        <button class="arrow right">  <i class="fas fa-caret-down"></i>  </button>
+                        <button class="arrow right">  <i class="fas fa-caret-right"></i>  </button>
+                    </div>
+                </div>
+                <table class="leave-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" />#</th>
+                            <th onclick="sortTable(1)">Name <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(2)">Period <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(3)">Days <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(4)">Leave Type <i class="fas fa-sort"></i></th>
+                            <th>Actions</th>
+                            <th></th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="checkbox"><input type="checkbox"></td>
+                            <td><img src="./assets/icons/avatar.svg" alt="Profile Image"> Mark Jacobs</td>
+                            <td>31 Mar, 2023 09:00 AM<br>31 Mar, 2023 18:00 PM</td>
+                            <td>1.0</td>
+                            <td>Annual Leave</td>
+                            <td>
+                                <button class="reject-btn">Reject</button>
+                                <button class="approve-btn">Approve</button>
+                            </td>
+                            <td><i class="fas fa-angle-right"></i></td> 
+                        </tr>
+                        <tr>
+                            <td class="checkbox"><input type="checkbox" checked></td>
+                            <td><img src="./assets/icons/user-icon-2.svg" alt="Profile Image"> Charlie Kristen</td>
+                            <td>10 Apr, 2023 09:00 AM<br>11 Apr, 2023 18:00 PM</td>
+                            <td>2.0</td>
+                            <td>Annual Leave</td>
+                            <td>
+                                <button class="reject-btn">Reject</button>
+                                <button class="approve-btn">Approve</button>
+                            </td>
+                            <td><i class="fas fa-angle-right"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox"><input type="checkbox" checked></td>
+                            <td><img src="./assets/icons/user-icon-3.svg" alt="Profile Image"> Nur Fariha binti Maslan</td>
+                            <td>21 Apr, 2023 09:00 AM<br>24 Apr, 2023 18:00 PM</td>
+                            <td>2.0</td>
+                            <td>Hospital Leave</td>
+                            <td>
+                                <button class="reject-btn">Reject</button>
+                                <button class="approve-btn">Approve</button>
+                            </td>
+                            <td><i class="fas fa-angle-right"></i></td> 
+                        </tr>
+                        <tr>
+                            <td class="checkbox"><input type="checkbox"></td>
+                            <td><img src="./assets/icons/user-icon-4.svg" alt="Profile Image"> Nishant Talwar</td>
+                            <td>27 Feb, 2023 14:00 PM<br>28 Feb, 2023 18:00 PM</td>
+                            <td>1.5</td>
+                            <td>Sick Leave</td>
+                            <td><span class="approved">Approved</span></td>
+                            <td><i class="fas fa-angle-right"></i></td> 
+                        </tr>
+                        <tr>
+                            <td class="checkbox"><input type="checkbox"></td>
+                            <td><img src="./assets/icons/user-icon-3.svg" alt="Profile Image"> Simon Minter</td>
+                            <td>22 Feb, 2023 09:00 AM<br>22 Feb, 2023 13:00 PM</td>
+                            <td>0.5</td>
+                            <td>Sick Leave</td>
+                            <td><span class="approved">Approved</span></td>
+                            <td><i class="fas fa-angle-right"></i></td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function sortTable(columnIndex) {
+            const table = document.querySelector('.leave-table tbody');
+            const rows = Array.from(table.rows);
+            const sortedRows = rows.sort((a, b) => {
+                const aColText = a.cells[columnIndex].innerText.trim();
+                const bColText = b.cells[columnIndex].innerText.trim();
+
+                return aColText > bColText ? 1 : -1;
+            });
+
+            while (table.firstChild) {
+                table.removeChild(table.firstChild);
+            }
+
+            table.append(...sortedRows);
+        }
+    </script>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const notificationIcon = document.querySelector('.notification-icon');
+    const notificationOverlay = document.getElementById('notificationOverlay');
+    const closeBtn = document.getElementById('closeBtn');
+
+    notificationIcon.addEventListener('click', () => {
+        notificationOverlay.classList.toggle('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        notificationOverlay.classList.remove('show');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === notificationOverlay) {
+            notificationOverlay.classList.remove('show');
+        }
+    });
+});
+
+    </script>
+</body>
+
+</html>

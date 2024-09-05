@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+          <div class="sidebar-header">
+              <img src="./assets/icons/hr-logo.svg" alt="logo" class="user-avatar">
+              <h2>HRHR</h2>
+          </div>
+          <ul class="menu">
+              <li><a href="#"><img class="icon" src="./assets/icons/dashboard.svg" alt="dashboard" /></i> Dashboard</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/calendar.svg" alt="calender" /></i> Calendar</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/employee.svg" alt="recruitment" /> Recruitment <span
+                          class="notification">10</span></a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/employees.svg" alt="employees" /> Employees</a></li>
+              <li><a href="#" class="active"><img class="icon" src="./assets/icons/clock.svg" alt="clock" /> Leave</a></li>
+              <li><a href="#"><img class="icon"src="./assets/icons/data.svg" alt="organisation" /> Organisation</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/billing-icon.svg" alt="billing" /> Billings</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/message-question.svg" alt="engagement" /> Engagement</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/monitor.svg" alt="development" /> Development</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/medal-star.svg" alt="Performance" /> Performance</a></li>
+              <li><a href="#"><img class="icon" src="./assets/icons/chart.svg" alt="reports" /> Reports</a></li>
+          </ul>
+      </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <header class="top-bar">
+            <div class="menumiz-logo"><img src="./assets/icons/union.svg" alt="menumiz-hrr" /><span
+                    style="margin-left:10px;">Menumiz HR</span></div>
+            <div class="display-flex">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Enter any keyword...">
+                </div>
+                <div class="user-info">
+                    <i class="fas fa-bell"></i>
+                    <img src="./assets/icons/avatar.svg" alt="User Avatar" class="user-avatar">
+                </div>
+            </div>
+        </header>
+            <div class="dashboard-header">
+              <div class="tabs">
+                <a href="#" class="active">Leave Management</a>
+                <a href="#">Leave Requests</a>
+                <a href="#">Leave Types</a>
+                <a href="#">Leave Calendar</a>
+                <a href="#">Leave Report</a>
+                <a href="#">Leave Approver</a>
+            </div>
+                <h1>Dashboard</h1>
+               
+            </div>
+
+            <div class="dashboard-content">
+                <div class="heatmap">
+                    
+                    <div class="most-days-content-wrap">
+                      <h2>Heatmap</h2>
+                      <div class="month-select">
+                        <span> <span class="sickday">Sickday</span>
+                        <button class="arrow left"> <i class="fas fa-caret-down"></i></button></span>
+                        <span class="sickday">March</span><span class="year"> 2023</span>
+                        <button class="arrow left"> <i class="fas fa-caret-down"></i></button>
+                        
+                    </div>
+                    </div>
+                    <div class="weekdays">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span style="background-color: #c33535;">Fri</span><span>Sat</span><span>Sun</span>
+                    </div>
+                    <div class="stats">
+                      <div class="stat sick-leave">
+                          <span>Sick Leave</span>
+                          <div class="flex-wrapper">
+                            <div class="single-chart">
+                              <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                <path class="circle-bg"
+                                  d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                  stroke-dasharray="50, 100"
+                                  d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <text x="18" y="20.35" class="percentage">50%</text>
+                              </svg>
+                            </div>
+                            
+                          
+                          </div>
+                        
+                      </div>
+                      <div class="stat annual-leave">
+                          <span>Annual Leave</span>
+                          <div class="flex-wrapper">
+                            <div class="single-chart">
+                              <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                <path class="circle-bg"
+                                  d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                  stroke-dasharray="30, 100"
+                                  d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <text x="18" y="20.35" class="percentage">30%</text>
+                              </svg>
+                            </div>
+                            
+                          
+                          </div>
+                      </div>
+                      <div class="stat emergency-leave">
+                          <span>Emergency Leave</span>
+                          <div class="flex-wrapper">
+                            <div class="single-chart">
+                              <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                <path class="circle-bg"
+                                  d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                  stroke-dasharray="20, 100"
+                                  d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <text x="18" y="20.35" class="percentage">20%</text>
+                              </svg>
+                            </div>
+                            
+                          
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="popular-day">Most popular day: Friday</div>
+                </div>
+                <div class="most-days-away">
+                  <div class="most-days-content-wrap">
+                    <h2>Most Days Away</h2>
+                    <div class="month-select">
+                      <span class="month">March</span><span class="year"> 2023</span>
+                      <button class="arrow left"> <i class="fas fa-caret-down"></i></button>
+                      
+                  </div>
+                  </div>
+                    
+                    <ul>
+                        <li><span class="rows-style"><img src="./assets/icons/user-icon-4.svg" alt="Profile Image"> &nbsp; Mark Jacobs </span><span>5.0 day(s)</span></li>
+                        <li><span  class="rows-style"><img src="./assets/icons/user-icon-4.svg" alt="Profile Image"> &nbsp;Charlie Kristen </span><span>3.5 day(s)</span></li>
+                        <li><span  class="rows-style"><img src="./assets/icons/user-icon-4.svg" alt="Profile Image">&nbsp; Nur Fariha binti Maslan </span><span>1.0 day(s)</span></li>
+                        <li><span  class="rows-style"><img src="./assets/icons/user-icon-4.svg" alt="Profile Image">&nbsp; Nishant Talwar</span> <span>1.0 day(s)</span></li>
+                    </ul>
+                    <div class="total-days"> TOTAL: 9.5 day(s)</div>
+                   
+                </div>
+            </div>
+
+            <div class="leave-requests">
+              <div class="top-inner-wrap">
+                  <h2 class="leave-requests-heading">Leave Requests</h2>
+                  <div class="view-options">
+                      <button class="list-view active">List View</button>
+                      <button class="month-view">Month View</button>
+                  </div>
+              </div>
+              <div class="filters">
+                  <div class="tabs">
+                      <button class="tab-btn active">All</button>
+                      <button class="tab-btn">Approved</button>
+                      <button class="tab-btn">Rejected</button>
+                  </div>
+                  <div class="month-select">
+                      <button class="arrow left"> <i class="fas fa-caret-left"></i></button>
+                      <span class="month">March</span><span class="year"> 2023</span>
+                      
+                      <button class="calendar-icon">
+                          <img src="./assets/icons/Date_range_fill.svg" alt="Calenar">
+                      </button>
+                      <button class="arrow right">  <i class="fas fa-caret-down"></i>  </button>
+                      <button class="arrow right">  <i class="fas fa-caret-right"></i>  </button>
+                  </div>
+              </div>
+              <table class="leave-table">
+                  <thead>
+                      <tr>
+                          <th><input type="checkbox" />#</th>
+                          <th onclick="sortTable(1)">Name <i class="fas fa-sort"></i></th>
+                          <th onclick="sortTable(2)">Period <i class="fas fa-sort"></i></th>
+                          <th onclick="sortTable(3)">Days <i class="fas fa-sort"></i></th>
+                          <th onclick="sortTable(4)">Leave Type <i class="fas fa-sort"></i></th>
+                          <th>Actions</th>
+                          <th></th> <!-- Add an empty header for the arrow -->
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="checkbox"><input type="checkbox"></td>
+                          <td><img src="./assets/icons/avatar.svg" alt="Profile Image"> Mark Jacobs</td>
+                          <td>31 Mar, 2023 09:00 AM<br>31 Mar, 2023 18:00 PM</td>
+                          <td>1.0</td>
+                          <td>Annual Leave</td>
+                          <td>
+                              <button class="reject-btn">Reject</button>
+                              <button class="approve-btn">Approve</button>
+                          </td>
+                          <td><i class="fas fa-angle-right"></i></td> 
+                      </tr>
+                      <tr>
+                          <td class="checkbox"><input type="checkbox" checked></td>
+                          <td><img src="./assets/icons/user-icon-2.svg" alt="Profile Image"> Charlie Kristen</td>
+                          <td>10 Apr, 2023 09:00 AM<br>11 Apr, 2023 18:00 PM</td>
+                          <td>2.0</td>
+                          <td>Annual Leave</td>
+                          <td>
+                              <button class="reject-btn">Reject</button>
+                              <button class="approve-btn">Approve</button>
+                          </td>
+                          <td><i class="fas fa-angle-right"></i></td>
+                      </tr>
+                      <tr>
+                          <td class="checkbox"><input type="checkbox" checked></td>
+                          <td><img src="./assets/icons/user-icon-3.svg" alt="Profile Image"> Nur Fariha binti Maslan</td>
+                          <td>21 Apr, 2023 09:00 AM<br>24 Apr, 2023 18:00 PM</td>
+                          <td>2.0</td>
+                          <td>Hospital Leave</td>
+                          <td>
+                              <button class="reject-btn">Reject</button>
+                              <button class="approve-btn">Approve</button>
+                          </td>
+                          <td><i class="fas fa-angle-right"></i></td> 
+                      </tr>
+                      <tr>
+                          <td class="checkbox"><input type="checkbox"></td>
+                          <td><img src="./assets/icons/user-icon-4.svg" alt="Profile Image"> Nishant Talwar</td>
+                          <td>27 Feb, 2023 14:00 PM<br>28 Feb, 2023 18:00 PM</td>
+                          <td>1.5</td>
+                          <td>Sick Leave</td>
+                          <td><span class="approved">Approved</span></td>
+                          <td><i class="fas fa-angle-right"></i></td> 
+                      </tr>
+                      <tr>
+                          <td class="checkbox"><input type="checkbox"></td>
+                          <td><img src="./assets/icons/user-icon-3.svg" alt="Profile Image"> Simon Minter</td>
+                          <td>22 Feb, 2023 09:00 AM<br>22 Feb, 2023 13:00 PM</td>
+                          <td>0.5</td>
+                          <td>Sick Leave</td>
+                          <td><span class="approved">Approved</span></td>
+                          <td><i class="fas fa-angle-right"></i></td> 
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
